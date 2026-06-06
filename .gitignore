@@ -1,0 +1,21 @@
+# Build output
+target/
+
+# pixi local environment
+.pixi/
+
+# Compiled Java
+*.class
+
+# Build artifacts (the runnable jar is published via GitHub Releases, not committed)
+*.jar
+
+# macOS
+.DS_Store
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+*.swp
+*~
