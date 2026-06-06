@@ -1,0 +1,17 @@
+[workspace]
+name = "oxidecalc"
+description = "Deal-Grove thermal silicon-dioxide growth calculator (Swing)."
+channels = ["conda-forge"]
+platforms = ["osx-64", "osx-arm64", "linux-64"]
+
+# Pixi provisions a project-local JDK 21 + Maven into ./.pixi -- no system Java.
+[dependencies]
+openjdk = "21.*"
+maven = ">=3.9"
+
+[tasks]
+build = "mvn -q -e -DskipTests package"
+test = "mvn -q -e test"
+verify = "mvn -q -e verify"
+run = { cmd = "java -jar target/oxidecalc-1.0.0.jar", depends-on = ["build"] }
+format = "mvn -q -e spotless:apply"
