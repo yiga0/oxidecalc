@@ -4,7 +4,7 @@
 [![Java](https://img.shields.io/badge/Java-21-blue.svg)](https://adoptium.net/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A small Swing desktop calculator for **thermal silicon-dioxide growth times** in
+A desktop calculator for **thermal silicon-dioxide growth times** in
 microfabrication. Enter the initial and final oxide thickness, the furnace
 temperature, the ambient (wet/dry), and the wafer orientation; OxideCalc returns
 the required furnace run time as `h:mm:ss`.
@@ -69,11 +69,9 @@ Already have a JDK 21 + Maven? You can skip pixi and run `mvn verify` /
 
 ## History
 
-OxideCalc began life in 2015 as a DrJava class project used in a cleanroom. This
-repository is a modernized public release (`v1.0.0`) of that internal "v2.0"
-tool: the Deal-Grove math is unchanged and pinned by golden-value tests, while
-the code was repackaged, split into a testable core plus a Swing front end, and
-given a modern Maven/pixi build.
+OxideCalc began life in 2015 as a DrJava project used in a cleanroom at Rogue Valley Microdevices (RVM). I worked at RVM as a process technician intern at the time. The process technicians would use an online web calculator to calculate growth times for the oxide furnaces. The WiFi connection into the cleanroom was very unreliable, so connecting to the web calculator was often difficult. I reverse engineered the web calculator to create this locally runnable Java application. We put it on the shared laptop in the lab for the technicians to use.
+
+This repository is a modernized public release (`v1.0.0`) of that tool: the Deal-Grove math is unchanged and pinned by golden-value tests, while the code was repackaged, split into a testable core plus a Swing front end, and given a modern Maven/pixi build. Claude Code helped significantly in refactoring and modernizing the repository for release.
 
 ## License
 
